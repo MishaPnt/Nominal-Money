@@ -20,7 +20,6 @@ namespace номінали
         public double NominalCoins()
         {
             return 0.01 * oneCent + 0.02 * twoCent + 0.05 * fiveCent + 0.10 * tenCent + 0.25 * twentyFiveCent + 0.50 * fiftyCent;
-            
         }
     }
 }
