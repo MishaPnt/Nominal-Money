@@ -39,7 +39,6 @@ namespace Номінали_гривні
             int fiftyCent = int.Parse(Console.ReadLine());
             Money money = new Money(one, two, five, ten, twenty, fifty, oneHundreds, twoHundreds,
             fiveHundreds);
-            
             номінали.Coins coins = new номінали.Coins(oneCent, twoCent, fiveCent, tenCent, twentyFiveCent, fiftyCent);
             Console.WriteLine("Гривнi: " + money.NominalMoney());
             Console.WriteLine("Копiйки:"+ Math.Round(coins.NominalCoins(),2));
@@ -79,22 +78,10 @@ namespace Номінали_гривні
             номінали.Coins coins1 = new номінали.Coins(oneCent1, twoCent1, fiveCent1, tenCent1, twentyFiveCent1, fiftyCent1);
             Nominal nominal1 = new Nominal(money1, coins1);
             SumOfMoney sumOfMoney1 = nominal + nominal1;
-         
             Console.WriteLine("Номiнал: " + Math.Round(nominal1.GetSum(), 2));
             Console.Write("Рiвнiсть: ");
-
             Console.WriteLine(sumOfMoney1.grn);
             Console.WriteLine(sumOfMoney1.sumOfCoins);
-            //Console.Write("Дiлення: ");
-            //Console.WriteLine(nominal / nominal1);
-            //Console.Write("Множення: ");
-            //Console.WriteLine(nominal * nominal1);
-            //Console.Write("Вiднiмання: ");
-            //Console.WriteLine(nominal - nominal1);
-            //Console.Write("Додавання: ");
-            //Console.WriteLine(nominal + nominal1);
-           
-
         }
     }
 }
