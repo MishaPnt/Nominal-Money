@@ -9,15 +9,12 @@ namespace номінали
         private Money getMoney;
         private Coins getCoin;
         private SumOfMoney sumOfMoney;
-
-
         public Nominal(Money getMoney,Coins getCoin)
         {
             this.getMoney = getMoney;
             this.getCoin = getCoin;
             sumOfMoney.grn = getMoney.NominalMoney();
             sumOfMoney.sumOfCoins = getCoin.NominalCoins();
-
         }
         public SumOfMoney GetSumObject { get; }
         public double AllNominal()
@@ -28,7 +25,6 @@ namespace номінали
         {
             return sumOfMoney.grn + sumOfMoney.sumOfCoins;
         }
-        
         public static bool operator ==(Nominal obj1, Nominal obj2)
         {
             return (obj1.GetSum() == obj2.GetSum());
@@ -68,6 +64,4 @@ namespace номінали
             return sumOfMoney;
         }
     }
-        
-    
 }
