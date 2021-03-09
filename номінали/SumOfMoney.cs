@@ -8,7 +8,5 @@ namespace номінали
     {
         public double grn;
         public double sumOfCoins;
-
-     
     }   
 }
