@@ -56,12 +56,14 @@ namespace номінали
             sumOfMoney.sumOfCoins = obj1.sumOfMoney.sumOfCoins * obj2.sumOfMoney.sumOfCoins;
             return sumOfMoney;
         }
-        public static SumOfMoney operator /(Nominal obj1, Nominal obj2)
+        public static double operator /(Nominal obj1, Nominal obj2)
         {
-            SumOfMoney sumOfMoney = new SumOfMoney();
-            sumOfMoney.grn = obj1.sumOfMoney.grn / obj2.sumOfMoney.grn;
-            sumOfMoney.sumOfCoins = obj1.sumOfMoney.sumOfCoins / obj2.sumOfMoney.sumOfCoins;
-            return sumOfMoney;
+            double getDivision = obj1.sumOfMoney.sumOfCoins * 100 + obj2.sumOfMoney.grn;
+            getDivision = obj1.sumOfMoney.sumOfCoins / obj2.sumOfMoney.grn;
+            if (getDivision == 0)
+                return 0;
+            return getDivision;
+             
         }
     }
 }
