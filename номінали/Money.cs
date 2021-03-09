@@ -4,7 +4,6 @@ using System.Text;
 
 namespace номінали
 {
-
     struct Money
     {
         private int one, two, five, ten, twenty, fifty, oneHundred, twoHundred, fiveHundreds;
@@ -26,7 +25,5 @@ namespace номінали
         {
             return 1 * one + 2 * two + 5 * five + 10 * ten + 20 * twenty + 50 * fifty + 100 * oneHundred + 200 * twoHundred + 500 * fiveHundreds;
         }
-        
     }
-
 }
