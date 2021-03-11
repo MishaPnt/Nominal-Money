@@ -45,6 +45,11 @@ namespace номінали
             SumOfMoney sumOfMoney = new SumOfMoney();
             sumOfMoney.grn = obj1.sumOfMoney.grn + obj2.sumOfMoney.grn;
             sumOfMoney.sumOfCoins = obj1.sumOfMoney.sumOfCoins + obj2.sumOfMoney.sumOfCoins;
+            if (sumOfMoney.sumOfCoins>100)
+            {
+                sumOfMoney.grn++;
+                double caseForCoins = sumOfMoney.sumOfCoins - 100;
+            }
             return sumOfMoney;
         }
 
