@@ -71,11 +71,12 @@ namespace номінали
 
         public static double operator /(Nominal obj1, Nominal obj2)
         {
-            double getDivision = obj1.sumOfMoney.sumOfCoins * 100 + obj2.sumOfMoney.grn;
-            getDivision = obj1.sumOfMoney.sumOfCoins / obj2.sumOfMoney.grn;
-            if (getDivision == 0)
+            double getSumOfNominal = obj1.sumOfMoney.grn*100 + obj1.sumOfMoney.sumOfCoins;
+            double getSumOfNominal2 = obj2.sumOfMoney.grn*100 + obj2.sumOfMoney.sumOfCoins;
+            if (getSumOfNominal2 == 0)
                 return 0;
-            return getDivision;
+            double result = getSumOfNominal / getSumOfNominal2;
+            return result;
         }
     }
 }
