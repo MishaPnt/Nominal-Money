@@ -80,7 +80,7 @@ namespace Номінали_гривні
             SumOfMoney sumOfMoney1 = nominal + nominal1;
             SumOfMoney sumOfMoney2 = nominal - nominal1;
             double sumOfMoney3 = nominal / nominal1;
-            SumOfMoney sumOfMoney4 = nominal * nominal1;
+            double sumOfMoney4 = nominal * nominal1;
             bool sumOfMoney5 = nominal == nominal1;
             bool sumOfMoney6 = nominal != nominal1;
             Console.Write("Додавання: ");
