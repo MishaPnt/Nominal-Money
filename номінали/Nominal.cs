@@ -64,7 +64,7 @@ namespace номінали
         public static SumOfMoney operator *(Nominal obj1, Nominal obj2)
         {
             SumOfMoney sumOfMoney = new SumOfMoney();
-            sumOfMoney.grn = obj1.sumOfMoney.grn * obj2.sumOfMoney.grn;
+            sumOfMoney.grn = obj1.sumOfMoney.sumOfCoins * obj2.sumOfMoney.sumOfCoins*100;
             sumOfMoney.sumOfCoins = obj1.sumOfMoney.sumOfCoins * obj2.sumOfMoney.sumOfCoins;
             return sumOfMoney;
         }
