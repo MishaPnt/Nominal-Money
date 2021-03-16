@@ -77,10 +77,12 @@ namespace Номінали_гривні
             Money money1 = new Money(one1, two1, five1, ten1, twenty1, fifty1, oneHundreds1, twoHundreds1, fiveHundreds1);
             Coins coins1 = new Coins(oneCent1, twoCent1, fiveCent1, tenCent1, twentyFiveCent1, fiftyCent1);
             Nominal nominal1 = new Nominal(money1, coins1);
+            Console.WriteLine($"Введіть це число:{nominal1}");
+            double multiplier = int.Parse(Console.ReadLine());
             SumOfMoney sumOfMoney1 = nominal + nominal1;
             SumOfMoney sumOfMoney2 = nominal - nominal1;
             double sumOfMoney3 = nominal / nominal1;
-            double sumOfMoney4 = nominal * nominal1;
+            SumOfMoney sumOfMoney4 = nominal * multiplier;
             bool sumOfMoney5 = nominal == nominal1;
             bool sumOfMoney6 = nominal != nominal1;
             Console.Write("Додавання: ");
