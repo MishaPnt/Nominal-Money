@@ -39,7 +39,7 @@ namespace Номінали_гривні
             int fiftyCent = int.Parse(Console.ReadLine());
             Money money = new Money(one, two, five, ten, twenty, fifty, oneHundreds, twoHundreds,
             fiveHundreds);
-            номінали.Coins coins = new номінали.Coins(oneCent, twoCent, fiveCent, tenCent, twentyFiveCent, fiftyCent);
+            Coins coins = new Coins(oneCent, twoCent, fiveCent, tenCent, twentyFiveCent, fiftyCent);
             Console.WriteLine("Гривнi: " + money.NominalMoney());
             Console.WriteLine("Копiйки:"+ Math.Round(coins.NominalCoins(),2));
             Console.WriteLine("Номiнал: " +Math.Round(money.NominalMoney()+ coins.NominalCoins(),2));
