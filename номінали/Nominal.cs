@@ -71,12 +71,11 @@ namespace номінали
         {
             SumOfMoney sumOfMoney = new SumOfMoney();
             sumOfMoney.grn = obj1.sumOfMoney.grn * obj2;
-            sumOfMoney.sumOfCoins = obj1.sumOfMoney.sumOfCoins * obj2*100;
-            if (sumOfMoney.sumOfCoins>100)
+            sumOfMoney.sumOfCoins = obj1.sumOfMoney.sumOfCoins * obj2;
+            for (; sumOfMoney.sumOfCoins > 100; )
             {
+                sumOfMoney.sumOfCoins -= 100;
                 sumOfMoney.grn++;
-                double v = sumOfMoney.sumOfCoins - 100;
-                sumOfMoney.sumOfCoins = v;
             }
             return sumOfMoney;
         }
