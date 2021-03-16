@@ -47,8 +47,8 @@ namespace номінали
             if (sumOfMoney.sumOfCoins>100)
             {
                 sumOfMoney.grn++;
-                double caseForCoins = -100;
-                sumOfMoney.sumOfCoins =caseForCoins;
+                double caseForCoins = sumOfMoney.sumOfCoins -100;
+                sumOfMoney.sumOfCoins = caseForCoins;
             }
             return sumOfMoney;
         }
@@ -61,9 +61,9 @@ namespace номінали
             sumOfMoney.sumOfCoins = obj1.sumOfMoney.sumOfCoins - obj2.sumOfMoney.sumOfCoins;
             if (sumOfMoney.sumOfCoins<0)
             {
-                double v = -1;
+                double v = sumOfMoney.grn-1;
                 sumOfMoney.grn = v;
-                double v1 = 100;
+                double v1 =  sumOfMoney.grn+100;
                 sumOfMoney.sumOfCoins = v1;
             }
             return sumOfMoney;
