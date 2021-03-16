@@ -78,7 +78,7 @@ namespace Номінали_гривні
             Coins coins1 = new Coins(oneCent1, twoCent1, fiveCent1, tenCent1, twentyFiveCent1, fiftyCent1);
             Nominal nominal1 = new Nominal(money1, coins1);
             Console.WriteLine($"Введiть це число:{nominal1.GetSum()}");
-            double multiplier = int.Parse(Console.ReadLine());
+            double multiplier = double.Parse(Console.ReadLine());
             SumOfMoney sumOfMoney1 = nominal + nominal1;
             SumOfMoney sumOfMoney2 = nominal - nominal1;
             double sumOfMoney3 = nominal / nominal1;
