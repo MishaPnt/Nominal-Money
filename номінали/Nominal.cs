@@ -61,7 +61,7 @@ namespace номінали
             if (sumOfMoney.sumOfCoins<0)
             {
                 sumOfMoney.grn--;
-                double v1 =  sumOfMoney.grn+100;
+                double v1 =  sumOfMoney.sumOfCoins+100;
                 sumOfMoney.sumOfCoins = v1;
             }
             return sumOfMoney;
