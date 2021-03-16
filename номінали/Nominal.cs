@@ -67,11 +67,18 @@ namespace номінали
             return sumOfMoney;
         }
 
-        public static double operator *(Nominal obj1, Nominal obj2)
+        public static SumOfMoney operator *(Nominal obj1, int obj2)
         {
-           double sumOfMoney = obj1.sumOfMoney.grn*100 + obj1.sumOfMoney.sumOfCoins;
-           double sumOfMoney2 = obj2.sumOfMoney.grn*100 + obj2.sumOfMoney.sumOfCoins;
-            return sumOfMoney*sumOfMoney2;
+            SumOfMoney sumOfMoney = new SumOfMoney();
+            sumOfMoney.grn = obj1.sumOfMoney.grn * obj2;
+            sumOfMoney.sumOfCoins = obj1.sumOfMoney.sumOfCoins * obj2*100;
+            if (sumOfMoney.sumOfCoins>100)
+            {
+                sumOfMoney.grn++;
+                double v = sumOfMoney.sumOfCoins - 100;
+                sumOfMoney.sumOfCoins = v;
+            }
+            return sumOfMoney;
         }
 
         public static double operator /(Nominal obj1, Nominal obj2)
