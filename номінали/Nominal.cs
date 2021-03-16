@@ -31,7 +31,6 @@ namespace номінали
         public static bool operator ==(Nominal obj1, Nominal obj2)
         {
             return (obj1.GetSum() == obj2.GetSum());
-
         }
 
         public static bool operator !=(Nominal obj1, Nominal obj2)
@@ -47,7 +46,7 @@ namespace номінали
             if (sumOfMoney.sumOfCoins>100)
             {
                 sumOfMoney.grn++;
-                double caseForCoins = sumOfMoney.sumOfCoins -100;
+                double caseForCoins = sumOfMoney.sumOfCoins - 100;
                 sumOfMoney.sumOfCoins = caseForCoins;
             }
             return sumOfMoney;
@@ -61,8 +60,7 @@ namespace номінали
             sumOfMoney.sumOfCoins = obj1.sumOfMoney.sumOfCoins - obj2.sumOfMoney.sumOfCoins;
             if (sumOfMoney.sumOfCoins<0)
             {
-                double v = sumOfMoney.grn-1;
-                sumOfMoney.grn = v;
+                sumOfMoney.grn--;
                 double v1 =  sumOfMoney.grn+100;
                 sumOfMoney.sumOfCoins = v1;
             }
