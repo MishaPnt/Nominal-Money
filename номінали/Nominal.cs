@@ -82,8 +82,7 @@ namespace номінали
             double getSumOfNominal2 = obj2.sumOfMoney.grn*100 + obj2.sumOfMoney.sumOfCoins;
             if (getSumOfNominal2 == 0)
                 return 0;
-            double result = getSumOfNominal / getSumOfNominal2;
-            return result;
+            return getSumOfNominal / getSumOfNominal2;
         }
     }
 }
