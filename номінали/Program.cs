@@ -77,7 +77,7 @@ namespace Номінали_гривні
             Money money1 = new Money(one1, two1, five1, ten1, twenty1, fifty1, oneHundreds1, twoHundreds1, fiveHundreds1);
             Coins coins1 = new Coins(oneCent1, twoCent1, fiveCent1, tenCent1, twentyFiveCent1, fiftyCent1);
             Nominal nominal1 = new Nominal(money1, coins1);
-            Console.WriteLine($"Введіть це число:{nominal1}");
+            Console.WriteLine($"Введiть це число:{nominal1.GetSum()}");
             double multiplier = int.Parse(Console.ReadLine());
             SumOfMoney sumOfMoney1 = nominal + nominal1;
             SumOfMoney sumOfMoney2 = nominal - nominal1;
@@ -86,13 +86,13 @@ namespace Номінали_гривні
             bool sumOfMoney5 = nominal == nominal1;
             bool sumOfMoney6 = nominal != nominal1;
             Console.Write("Додавання: ");
-            Console.WriteLine(sumOfMoney1);
+            Console.WriteLine(sumOfMoney1.grn);
             Console.Write("Вiднiмання: ");
-            Console.WriteLine(sumOfMoney2);
+            Console.WriteLine(sumOfMoney2.grn);
             Console.Write("Дiлення: ");
             Console.WriteLine(sumOfMoney3);
             Console.Write("Множення: ");
-            Console.WriteLine(sumOfMoney4);
+            Console.WriteLine(sumOfMoney4.grn);
             Console.Write("Операцiя ==: ");
             Console.WriteLine(sumOfMoney5);
             Console.Write("Операцiя !=: "); 
